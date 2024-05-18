@@ -1,9 +1,11 @@
 body{padding: 0;margin: 0;}
+h1{text-align: center; width: 100%;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+background-color: rgb(16, 16, 16);color: white;}
 #main{display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: 98vh;
 cursor: default ;}
-h1{text-align: center; width: 100%;background-color: rgb(27, 24, 24);color: rgb(255, 255, 255);}
 a{cursor: pointer;text-decoration: none;}
 button{cursor: pointer;}
 #header{width: 100%;display: flex;
@@ -82,14 +84,17 @@ button{cursor: pointer;}
 justify-content: space-between;align-items: center;}
 #subcontainer4{width: 95%;height: 48%;
     background-size: cover;
+    color: rgb(255, 255, 255);
+   text-shadow: 1px 0.5px 6px black;
 }
 
-#container2{background-image: url(https://isorepublic.com/wp-content/uploads/2018/11/newspaper-1100x733.jpg);
+#container2{
     background-size:cover;
+    background-image: url(https://isorepublic.com/wp-content/uploads/2018/11/newspaper-1100x733.jpg);
 }
 #thundericon{height: 1.2em;}
-.newspapericon{height: 0.9em;border-radius: 50%;}
-#newspapericon{height: 1.15em;border-radius: 50%;}
+.newspapericon{margin: 0 0.5% 0 0.5%; height: 0.9em;border-radius: 50%;}
+#newspapericon{margin: 0 0.5% 0 0.5%; height: 1.15em;align-self: center; border-radius: 50%;}
 .containers{ display: flex;flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-end;align-items:flex-start;
@@ -110,9 +115,8 @@ justify-content: space-between;align-items: center;}
     text-align: center; background-color: black;
     border-radius: 20px;color: white;}
 #c2sub2{
-    width: 15rem;
-    height:1.2em;
-    overflow: hidden;
+    width: 94%;
+    margin-left: 2.6%;
 }
 #c2sub3{width: 93%;
     display: flex;
@@ -121,11 +125,11 @@ justify-content: space-between;align-items: center;}
 }
 .c2sub3subs{
     margin: 3% 1% 3% 1%; 
-    overflow: hidden;
-    font-size: medium;
-    height: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
-
+#date1{width: 70%;}
 .tags{ 
     padding: 2.5%;
     width: fit-content;
@@ -137,16 +141,14 @@ justify-content: space-between;align-items: center;}
     display: flex;
     height: fit-content;
     flex-wrap: wrap;}
-#n3sub2{width: 80%;
-    overflow: hidden;
-    height: 1em;
+#n3sub2{width: 95%;
+    margin-left: 3.5%;
 }
 #n3sub3{display: flex;
     justify-content: flex-start;
     width: 93%;
 flex-wrap: wrap;}
-#c4sub2{width: 90%;
-    height: 1.2em;
+#c4sub2{width: 95%;
     overflow: hidden;}
 .c4sub3{width: 93%;display: flex;
     justify-content: flex-start;
@@ -154,15 +156,17 @@ flex-wrap: wrap;}
     margin: 1%;
     align-items:center;
 }
-
-.themeofdiv{width: 80%;height: 1.1em;
-    overflow: hidden;
+.themeofdiv{width: 70%;height: 1.1em;
 }
 .ssubdivs1{margin: 2%;align-items: center;}
-.ssubdivs2{margin: 1.5%;width: 90%;display: flex;flex-wrap: wrap;align-items: center;}
+.ssubdivs2{margin: 1.5%;width: 90%;
+    display: flex;flex-wrap: wrap;
+    align-items: center;
+white-space: nowrap;}
 #sidebar::-webkit-scrollbar{
     display: none;
 }
+
 #sidebar{
     height: 98%;width: 31%;
 }
@@ -182,27 +186,23 @@ flex-wrap: wrap;}
     flex-wrap: wrap;
     justify-content: center;
 overflow: scroll;}
-/* #sidesub2::-webkit-scrollbar{
-    display: none;
-} */
+
 .newsfromAPI{width: 69%;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .headline{
     height: 79%;
     width: 100%;
 }
-.datediv{
-    display: flex;
-    justify-content: center;
-    height: 19%;
-    overflow: hidden;
-    align-items: center;
-    width: 100%;
-}
 
+.datediv{
+    height: 19%;
+    max-width: 100%;
+    text-align: center;
+}
 #sidesub1{display: flex;
 flex-wrap: wrap;
 height: 7%;
@@ -220,7 +220,7 @@ border-radius: 3px;}
 .newsimagediv{height: 98%;width: 29%;display: flex;
     flex-wrap: wrap;align-items: center;
 justify-content: center;}
-.calendericon{height:11px;margin-right:1.7% ;}
+.calendericon{margin-right:1.7% ;}
 
 @media(max-width:1000px){
     .containers{margin: 0.5%;}
@@ -235,9 +235,12 @@ justify-content: center;}
     .containers{font-size: 110%;}
     .datediv{font-size: 90%;}
     .newsoptions{font-size: 85%;}
+    .calendericon{height: 11px;}
     .newsfromAPI{font-size: 80%;}
 }
-
+@media(max-width:1150px){
+    .newsfromAPI{font-size: 90%;}
+}
 @media(min-width:1000px){
     #container2{height: 75vh; width: 30vw;
         margin: 4px 0.5% 4px 0.5%;}
@@ -250,7 +253,11 @@ justify-content: center;}
     #c1sub1{width: 78%;}
     #sixthopt{font-size: 120%;}
     .c2subs{margin: 3% 1% 3% 1%;}
-    .containers{font-size: 130%;}
+    .containers{font-size: 120%;}
+    .popupcontainer{font-size: 130%;}
+    .calendericon{height: 15px;}
+    #c4sub2{font-size: medium;}
+
 }
 @media(max-width:700px){
     .containers{margin: 0.5%;}
@@ -261,30 +268,28 @@ justify-content: center;}
     #breakingnewsanchor{font-size: 90%;}
     #sixthopt{font-size: 70%;}
     .c2subs{margin: 1%;}
-    .datediv{font-size: 85%;}
     .containers{font-size: 90%;}
     .newsoptions{font-size: 70%;}
-    #submain{height:49vh;}
+    #submain{height:45vh;}
     .newsfromAPI{font-size: 75%;}
+    
 }
 @media(max-width:500px){
     .containers{margin: 0.5%;}
     .headerbutt{font-size: 70%}
     #headersub1{width: 87%;}
     #paragraph1{width: 4.8rem;}
-    .datediv{font-size: 80%;}
     .calendericon{display: none;}
     .containers{font-size: 75%;}
-    .newsfromAPI{font-size: 70%;}
-    #submain{height: 46.05vh;}
-    #container2{height: 28vh;}
+    .newsfromAPI{font-size: 69%;}
 }
 
-@media(max-width:300px){
-    #container2{height: 27vh;}
-    #submain{height: 43vh;}
+@media(max-width:350px){
+    #submain{height: 42vh;}
+    .containers{font-size: 60%;}
     .headerbutt{font-size: 40%;}
-    .newsfromAPI{font-size: 50%;}
+    .newsfromAPI{font-size: 60%;}
+    .datediv{font-size: 0%;}
 }
 @keyframes scrollnews{
     0%{
@@ -294,3 +299,79 @@ justify-content: center;}
         transform: translateY(-28vh);
     }
 }
+
+.showpopupdiv{
+    width: 92vw;
+    height: 90vh;
+    display: flex;flex-wrap: wrap;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+.popupcontainer{display: flex;flex-wrap: wrap;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 5px 0.5px rgba(0,0,0,0.25);
+    height: 100%;
+    width: 75%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: popout 0.2s linear ;
+}
+.headlineType{
+    text-align: start;
+    width: 90%;
+    height: 1.2em;
+    text-align: center;
+}
+.headlineHeadline{
+    width: 90%;
+    max-height: 2.5em;
+    text-align: center;
+}
+.headlineImage{
+    width: 90%;
+    max-height: 50%;
+    object-fit: cover;
+}
+.headlineContent{
+    width: 93%;
+    text-align: center;
+}
+.headlineAuthor{
+    width: 90%;
+    text-align: end;
+}
+.headlineDate{
+    width: 90%;
+    text-align: end;
+}
+.closebutt{
+    font-size: 130%;
+    padding: 0.5em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    max-height: 2em;
+    aspect-ratio: 1;
+    border-radius: 10%;
+    border: none;
+    box-shadow: 0px 0px 5px 0.5px rgba(0,0,0,0.25);}
+
+@keyframes popout{
+    0%{
+        transform: translateZ(0);
+    }
+    50%{
+        transform:scale(103%,103%)
+    }
+    100%{
+        transform: translateZ(0);
+    }
+}
+/* #container2:hover{
+    animation: popout 0.2s linear ;
+    /* transition: all 0.5s ease; */
+/* } */
